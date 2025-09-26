@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Your Name | Home</title>
+        <meta name="description" content="Personal homepage of Your Name." />
+        <style>
+          :root { --w: 860px; }
+          body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin: 2rem; line-height: 1.7; color: #111; }
+          .wrap { max-width: var(--w); margin: auto; }
+          header { margin-bottom: 1.5rem; }
+          .hero { display: flex; align-items: center; gap: 1rem; }
+          .avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 1px solid #eee; flex: 0 0 auto; }
+          header h1 { font-size: 2rem; margin: 0 0 .25rem; }
+          header p { margin: .25rem 0 1rem; color: #444; }
+          nav a { margin-right: 1rem; }
+          section { margin: 2rem 0; }
+          h2 { font-size: 1.25rem; margin-bottom: .5rem; }
+          a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+          footer { margin-top: 3rem; font-size: .95rem; color: #666; }
+      
+          /* Publications like the screenshot */
+          .publist { list-style: none; padding-left: 0; }
+          .pub { margin: 1rem 0 1.25rem; }
+          .pub-title { display: block; font-weight: 700; font-style: italic; }
+          .pub-authors { margin: .25rem 0; }
+          .pub-authors .author.me,
+          .pub-authors .author.primary { font-weight: 700; } /* bold your name or first author */
+          .pub-venue .abbr { font-weight: 700; }
+        </style>
+      </head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="hero">
+        <!-- Local photo: place me.jpg next to this index.html -->
+        <img class="avatar" src="profile.jpg" alt="Portrait of Your Name" width="120" height="120" fetchpriority="high" />
+        <div>
+          <h1>Your Name</h1>
+          <p>Ph.D. student focusing on Graph Databases.</p>
+          <nav>
+            <a href="#about">About</a>
+            <a href="#publications">Publications</a>
+            <a href="https://github.com/choeoe" target="_blank" rel="noreferrer">GitHub</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am a Ph.D. candidate at the Institute of Software, Chinese Academy of Sciences (ISCAS), advised by Prof. Tao Huang, Prof. Jun Wei, and Prof. Wensheng Dou. My research focuses on graph database systems, with an emphasis on reliability and query optimization.
+      </p>
+    </section>
+
+    <section id="publications">
+        <h2>Publications</h2>
+        <ul class="publist">
+          <!-- EXAMPLE (matches your screenshot layout) -->
+          <li class="pub">
+            <span class="pub-title">
+                Finding Bugs in Gremlin-Based Graph Database Systems via
+                Randomized Differential Testing
+            </span>
+            <div class="pub-authors">
+            Yingying Zheng, Wensheng Dou, Yicheng Wang, Zheng Qin, <span class="author me">Lei Tang</span>,
+            Yu Gao, Dong Wang, Wei Wang, Jun Wei
+            </div>
+            <div class="pub-venue">
+              <span class="abbr">ISSTA'22</span>
+            </div>
+          </li>
+  
+          <!-- Add your own items below by copy/paste; bold your name with class="author me" -->
+          <li class="pub">
+            <span class="pub-title">Randomized Differential Testing of RDF Stores</span>
+            <div class="pub-authors">
+                Rui Yang, Yingying Zheng, <span class="author me">Lei Tang</span>, Wensheng Dou, Wei Wang, Jun Wei
+            </div>
+            <div class="pub-venue">
+              <span class="abbr">ICSE'23 Demo</span>
+            </div>
+          </li>
+  
+          <li class="pub">
+            <span class="pub-title">Differential Optimization Testing of Gremlin-Based
+                Graph Database Systems</span>
+            <div class="pub-authors">
+                Yingying Zheng, Wensheng Dou, <span class="author me">Lei
+                Tang</span>, Ziyu Cui, Jiansen Song, Ziyue Cheng, Wei Wang, Jun
+                Wei, Hua Zhong, Tao Huang
+            </div>
+            <div class="pub-venue">
+              <span class="abbr">ICST'24</span>
+            </div>
+          </li>
+
+          <li class="pub">
+            <span class="pub-title">Testing Gremlin-Based Graph Database Systems via Query
+                Disassembling</span>
+            <div class="pub-authors">
+                Yingying Zheng, Wensheng Dou, <span class="author me">Lei
+                Tang</span>, Ziyu Cui, Yu Gao, Jiansen Song, Liang Xu, Jiaxin
+                Zhu, Wei Wang, Jun Wei, Hua Zhong, Tao Huang
+            </div>
+            <div class="pub-venue">
+              <span class="abbr">ISSTA'24</span>
+            </div>
+          </li>
+
+          <li class="pub">
+            <span class="pub-title">Proving Cypher Query Equivalence</span>
+            <div class="pub-authors">
+                <span class="author me">Lei Tang</span>, Wensheng Dou, Yingying
+                Zheng, Lijie Xu, Wei Wang, Jun Wei, Tao Huang
+            </div>
+            <div class="pub-venue">
+              <span class="abbr">ICDE'24</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+    <footer>© <span id="y"></span> Lei Tang · Powered by GitHub Pages</footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
